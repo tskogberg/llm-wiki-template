@@ -80,3 +80,7 @@ Pause Obsidian Git's auto-commit while merging, or run the merge when Obsidian i
 - Start from `wiki/index.md`; use graph view to see how pages connect.
 - `wiki/log.md` shows what changed recently.
 - `views/wiki.base` has table views: all pages by type, recently updated, stale (6+ months), and sources.
+
+## License
+The template is released under the [MIT License](LICENSE). It covers the template's own files; what you put in your wiki is yours.
+The Obsidian Git plugin isn't included here; you install it from Obsidian's Community plugins under its own license.
