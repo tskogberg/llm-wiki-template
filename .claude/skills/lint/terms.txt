@@ -1,0 +1,3 @@
+# Terms for lint check 8: names that may deserve their own page.
+# One per line. Lint flags a term found on 3 or more pages that has no page (or alias) of its own.
+# Add names you notice recurring in plain text, e.g. a product, a colleague or a vendor.

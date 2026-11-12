@@ -1,0 +1,62 @@
+filters:
+  and:
+    - file.inFolder("wiki")
+    - file.ext == "md"
+    - note.type != "index"
+    - note.type != "log"
+properties:
+  note.type:
+    displayName: Type
+  note.tags:
+    displayName: Tags
+  note.updated:
+    displayName: Updated
+views:
+  - type: table
+    name: All pages
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - tags
+      - updated
+  - type: table
+    name: Recently updated
+    order:
+      - file.name
+      - type
+      - tags
+      - updated
+    sort:
+      - property: updated
+        direction: DESC
+    limit: 30
+  - type: table
+    name: Stale (6+ months)
+    filters:
+      and:
+        - note.updated < today() - "6M"
+    order:
+      - file.name
+      - type
+      - tags
+      - updated
+    sort:
+      - property: updated
+        direction: ASC
+  - type: table
+    name: Sources
+    filters:
+      and:
+        - note.type == "source"
+    order:
+      - file.name
+      - author
+      - date
+      - tags
+      - raw
+      - created
+    sort:
+      - property: created
+        direction: DESC

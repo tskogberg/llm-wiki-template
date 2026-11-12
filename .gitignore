@@ -1,0 +1,10 @@
+# Obsidian: keep settings, ignore per-device state
+.obsidian/workspace*.json
+.obsidian/cache
+
+# Obsidian Git plugin: install it from Community plugins; only its settings (data.json) are versioned
+.obsidian/plugins/obsidian-git/*
+!.obsidian/plugins/obsidian-git/data.json
+
+# OS
+.DS_Store
