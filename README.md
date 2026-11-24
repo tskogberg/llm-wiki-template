@@ -37,7 +37,10 @@ Every ingest and query sends the relevant documents to the model.
    If git doesn't know your name yet: `git config user.name "Your Name"` and `git config user.email "you@example.com"`.
 2. **Open it in Obsidian**: *Open folder as vault*, then *Settings → Community plugins → Turn on community plugins → Browse*,
    search for **Git** (by Vinzent), *Install* and *Enable*. Its settings are already in the repo: commit and push 5 minutes after changes stop,
-   pull when Obsidian starts. Reload Obsidian once afterwards.
+   pull when Obsidian starts. Installing the plugin deletes that settings file, so restore it and then reload Obsidian:
+   ```sh
+   git checkout -- .obsidian/plugins/obsidian-git/data.json
+   ```
 3. **Install `/wiki-note`** so any Claude Code session can add its work to this wiki:
    ```sh
    ln -s "$PWD/setup/wiki-note" ~/.claude/skills/wiki-note
