@@ -28,7 +28,7 @@ Every ingest and query sends the relevant documents to the model.
 ## Set up a new wiki
 1. **Clone the template** and point it at your own repository. Keeping the template as a second remote lets you pull improvements later.
    ```sh
-   git clone <template-url> ~/Projects/my-wiki
+   git clone https://github.com/tskogberg/llm-wiki-template.git ~/Projects/my-wiki
    cd ~/Projects/my-wiki
    git remote rename origin template
    git remote add origin <your-wiki-repo-url>
